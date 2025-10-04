@@ -1,0 +1,26 @@
+footer{ 
+    background-color: beige; 
+    text-align: center;
+    gap: 10px;
+    background: black;
+    color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .cajas-footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        .caja-footer{
+            @include flex(flex,row,center,center,15px);
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+/*nuevo footer*/
+/*vamos hacerlo grids si lo vemos necesario*/

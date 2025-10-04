@@ -1,0 +1,59 @@
+@media screen and (max-width: 650px) { /*tiene que estar al final de todo siempre y escrito de esta manera*/
+    .cajas{
+
+    grid-template-columns: 1fr;
+    gap: 10px;}
+.inspiracion{
+    flex-direction: column;
+    text-align: center;
+    max-height: 800px;
+    gap: 10px;
+}
+footer{
+    grid-template-columns: 1fr;
+}
+.fotos{
+    grid-template-columns: 1fr;
+
+}
+.img-1{
+    grid-column: span 1;
+}
+.img-3 {
+    grid-row: span 1;
+} 
+.img-8 {
+    grid-row: span 1;
+}   
+.img-7{
+    grid-column: span 1;
+}
+.footer-contenedor {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .footer-item {
+        justify-content: center;    
+}
+.catalogo{
+    grid-template-columns: 1fr;
+
+}
+.sobre-nosotros {
+        flex-direction: column;
+        text-align: center;
+      }
+
+.sobre-nosotros img {
+        width: 80%;
+        max-width: 350px;
+      }
+
+.texto p {
+        text-align: center;
+      }
+.ventaja-caja{
+    grid-template-columns: repeat(2,1fr);
+}
+ }
+
