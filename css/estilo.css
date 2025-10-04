@@ -284,16 +284,33 @@ footer .cajas-footer {
   align-items: center;
   gap: 15px;
 }
-footer .cajas-footer .caja-footer {
+footer .cajas-footer a {
+  text-decoration: none;
+  color: white;
+}
+footer .caja-footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 15px;
+  gap: 15px;
 }
-footer .cajas-footer .caja-footer a {
+footer .caja-footer a {
   text-decoration: none;
   color: white;
+}
+footer .footer-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+footer .footer-item img {
+  width: 24px;
+  height: 24px;
 }
 
 /*nuevo footer*/
