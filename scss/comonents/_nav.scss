@@ -1,0 +1,19 @@
+/**nav**/
+nav{   
+    background-color: black;
+    .navbar-brand {
+        font-family: "Montserrat", sans-serif !important;
+        font-optical-sizing: auto;
+        font-weight: 400 !important;
+        font-style: normal; 
+        color: white !important; 
+        .nav-link {
+            color: white !important;
+            .navbar-toggler{
+                color: white !important;
+                background-color: #d3d3d390 !important;
+            }
+        }
+    }
+}
+

@@ -280,8 +280,8 @@ body{
     text-align: center;
 }
 .recomendacion{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     gap: 15px;
 }
 
@@ -387,6 +387,9 @@ footer{
         width: 80%;
         max-width: 350px;
       }
+    .recomendacion{
+        grid-template-columns: 1fr;
+    }
 
 .texto p {
         text-align: center;

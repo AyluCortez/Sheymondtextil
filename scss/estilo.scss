@@ -1,6 +1,6 @@
-@import "./base/generales";
-@import "./comonents/nav";
-@import "./comonents/header.scss";
-@import "./comonents/footer";
-@import "./base/funcionalidades";
-@import "./base/mediaquerys";
+@use "./base/generales";
+@use "./comonents/nav";
+@use "./comonents/body";
+@use "./comonents/footer";
+@use "./base/funcionalidades";
+@use "./base/mediaquerys";

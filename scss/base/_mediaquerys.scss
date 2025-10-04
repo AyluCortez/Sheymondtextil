@@ -1,59 +1,93 @@
+
+ //variable de colores
+$color-principal: black;
+
+//listas de colores
+$lista-colores:white,#6e6b6b26,rgba(137, 134, 134, 0.477);
+
+//extensiones
+%mediacolumn{
+    grid-template-columns: (1fr);
+}
+
+//variable mixins
+
+@mixin flex($flex,$direction,$justify,$align,$gap){
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+@mixin grid-colum($display,$template-columns,$template-rows,$gap){
+    display: $display;
+    grid-template-columns: $template-columns;
+    grid-template-rows: $template-rows;
+    gap: $gap;
+}
+@mixin grid-rows($display,$template-rows,$gap){
+    display: $display;
+    grid-template-rows: $template-rows;
+    gap: $gap;
+}
+@mixin grid1 ($frecuencia){
+    grid-template-columns: ($frecuencia);
+}
+
 @media screen and (max-width: 650px) { /*tiene que estar al final de todo siempre y escrito de esta manera*/
     .cajas{
+        @include grid1(1fr);
+        gap: 10px;}
+    //inspiracion//
 
-    grid-template-columns: 1fr;
-    gap: 10px;}
-.inspiracion{
+    .inspiracion{
     flex-direction: column;
     text-align: center;
     max-height: 800px;
-    gap: 10px;
-}
-footer{
-    grid-template-columns: 1fr;
-}
-.fotos{
-    grid-template-columns: 1fr;
+    gap: 10px;}
+    .fotos{
+    @include grid1(1fr);}
+    .img-1{
+    grid-column: span 1;}
+    .img-3 {
+    grid-row: span 1;} 
+    .img-8 {
+    grid-row: span 1;}   
+    .img-7{
+    grid-column: span 1;}
 
-}
-.img-1{
-    grid-column: span 1;
-}
-.img-3 {
-    grid-row: span 1;
-} 
-.img-8 {
-    grid-row: span 1;
-}   
-.img-7{
-    grid-column: span 1;
-}
-.footer-contenedor {
-        grid-template-columns: 1fr;
+    /*footer*/
+
+
+    footer{
+    grid-template-columns: 1fr;}
+    .footer-contenedor {
+        @include grid1(1fr);;
         text-align: center;
-      }
-      .footer-item {
-        justify-content: center;    
-}
-.catalogo{
-    grid-template-columns: 1fr;
+    .footer-item {
+        justify-content: center;}
+    }
+    /*catalogo*/
 
-}
-.sobre-nosotros {
+
+    .catalogo{
+    @include grid1(1fr);;
+    /*sobre nosotros*/
+    .sobre-nosotros {
         flex-direction: column;
-        text-align: center;
-      }
-
-.sobre-nosotros img {
+        text-align: center;}
+        .sobre-nosotros img {
         width: 80%;
-        max-width: 350px;
-      }
+        max-width: 350px;}
+        .texto{
+            p {
+                text-align: center;}
+            }
+    } 
+    .ventaja{
+        .ventaja-caja{
+            grid-template-columns: repeat(2,1fr);
+        }
 
-.texto p {
-        text-align: center;
-      }
-.ventaja-caja{
-    grid-template-columns: repeat(2,1fr);
-}
- }
-
+    }
+ }   
