@@ -11,7 +11,6 @@ body {
   box-sizing: border-box;
 }
 
-/**nav**/
 nav {
   background-color: black;
 }
@@ -22,12 +21,15 @@ nav .navbar-brand {
   font-style: normal;
   color: white !important;
 }
-nav .navbar-brand .navbar-toggler {
+nav .navbar-brand h1 {
+  color: white !important;
+}
+nav .nav-link {
+  color: white !important;
+}
+nav .navbar-toggler {
   color: white !important;
   background-color: rgba(211, 211, 211, 0.5647058824) !important;
-}
-nav .navbar-brand .nav-item a .nav-link {
-  color: white !important;
 }
 
 /*CARRUSEL*/
@@ -326,6 +328,23 @@ footer .footer-item img {
     grid-template-columns: 1fr;
     gap: 10px;
   }
+  .ventajas .ventaja-caja {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .titulo-reco .recomendacion {
+    grid-template-columns: 1fr;
+  }
+  .sobre-nosotros {
+    flex-direction: column;
+    text-align: center;
+  }
+  .sobre-nosotros img {
+    width: 80%;
+    max-width: 350px;
+  }
+  .sobre-nosotros .texto p {
+    text-align: center;
+  }
   .inspiracion {
     flex-direction: column;
     text-align: center;
@@ -347,6 +366,9 @@ footer .footer-item img {
   .img-7 {
     grid-column: span 1;
   }
+  .catalogo {
+    grid-template-columns: 1fr;
+  }
   footer {
     grid-template-columns: 1fr;
   }
@@ -356,23 +378,6 @@ footer .footer-item img {
   }
   .footer-contenedor .footer-item {
     justify-content: center;
-  }
-  .catalogo {
-    grid-template-columns: 1fr;
-  }
-  .sobre-nosotros {
-    flex-direction: column;
-    text-align: center;
-  }
-  .sobre-nosotros img {
-    width: 80%;
-    max-width: 350px;
-  }
-  .sobre-nosotros .texto p {
-    text-align: center;
-  }
-  .ventaja-caja {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 

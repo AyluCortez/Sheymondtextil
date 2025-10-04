@@ -33,14 +33,41 @@ $lista-colores:white,#6e6b6b26,rgba(137, 134, 134, 0.477);
 @mixin grid1 ($frecuencia){
     grid-template-columns: ($frecuencia);
 }
+//SE DEBE PONER EN CADA ARCHIVO DONDE SE DESEE USAR//
 
-//media querys
+//MEDIA QUERYS//
 
 @media screen and (max-width: 650px) {
+    //INDEX MEDIA QUERYS//
   .cajas {
     @include grid1(1fr);
     gap: 10px;
   }
+  .ventajas{
+    .ventaja-caja {
+        @include grid1(repeat(2,1fr));}
+    }
+    .titulo-reco{
+        .recomendacion{
+            @include grid1(1fr);
+        }
+    }
+
+    //SOBRE NOSOTROS MEDIA QUERYS//
+  .sobre-nosotros {
+    flex-direction: column;
+    text-align: center;
+    img {
+      width: 80%;
+      max-width: 350px;
+    }
+    .texto {
+      p {
+        text-align: center;
+      }
+    }
+  }
+  //INSPIRACION MEDIA QUERYS//
   .inspiracion {
     flex-direction: column;
     text-align: center;
@@ -62,6 +89,11 @@ $lista-colores:white,#6e6b6b26,rgba(137, 134, 134, 0.477);
   .img-7 {
     grid-column: span 1;
   }
+  //CATALOGO MEDIA QUERYS//
+  .catalogo {
+    @include grid1(1fr);
+  }
+  //FOOTER MEDIA QUERYS//
   footer {
     grid-template-columns: 1fr;
   }
@@ -72,23 +104,5 @@ $lista-colores:white,#6e6b6b26,rgba(137, 134, 134, 0.477);
       justify-content: center;
     }
   }
-  .catalogo {
-    @include grid1(1fr);
-  }
-  .sobre-nosotros {
-    flex-direction: column;
-    text-align: center;
-    img {
-      width: 80%;
-      max-width: 350px;
-    }
-    .texto {
-      p {
-        text-align: center;
-      }
-    }
-  }
-  .ventaja-caja {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  
 }
