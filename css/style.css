@@ -121,7 +121,7 @@ body{
     justify-content: space-around;
     gap: 20px;
 }
-.texto-inspiracion{
+.texto-inspiracion{ 
     display: flex;
     justify-content: center;
     align-items: center;
