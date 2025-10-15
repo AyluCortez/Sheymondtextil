@@ -74,21 +74,30 @@ $lista-colores:white,#6e6b6b26,rgba(137, 134, 134, 0.477);
     max-height: 800px;
     gap: 10px;
   }
-  .fotos {
-    @include grid1(1fr);
+  .galeria {
+    .fotos {
+      @include grid1(1fr);
+      .foto{
+        &.img-1 {
+          grid-row: span 1;
+        }
+        &.img-3 {
+          grid-row: span 1;
+        }
+        &.img-8 {
+          grid-row: span 1;
+        }
+        &.img-7 {
+          grid-column: span 1;
+        }
+        &.img-11{
+          grid-row: span 1;
+        }
+      }
+    }
   }
-  .img-1 {
-    grid-column: span 1;
-  }
-  .img-3 {
-    grid-row: span 1;
-  }
-  .img-8 {
-    grid-row: span 1;
-  }
-  .img-7 {
-    grid-column: span 1;
-  }
+  
+
   //CATALOGO MEDIA QUERYS//
   .catalogo {
     @include grid1(1fr);

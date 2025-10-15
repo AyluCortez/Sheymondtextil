@@ -6,8 +6,10 @@ $color-principal: black;
 $lista-colores:white,#6e6b6b26,rgba(137, 134, 134, 0.477);
 
 //extensiones
-%mediacolumn{
-    grid-template-columns: (1fr);
+// Placeholder selectors (%name) cannot be reliably @extend-ed across media queries.
+// Provide a mixin instead so it can be included inside media queries.
+@mixin mediacolumn() {
+    grid-template-columns: 1fr;
 }
 
 //variable mixins
