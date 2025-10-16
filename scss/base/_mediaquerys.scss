@@ -36,6 +36,22 @@ $lista-colores:white,#6e6b6b26,rgba(137, 134, 134, 0.477);
 //SE DEBE PONER EN CADA ARCHIVO DONDE SE DESEE USAR//
 
 //MEDIA QUERYS//
+@media screen and (max-width: 850px) {
+  .inspiracion {
+    flex-direction: column;
+    text-align: center;
+    max-height: 800px;
+    gap: 10px;
+  }
+  //sobre nosotros media querys//
+  .sobre-nosotros {
+    .caja-sobre{
+        @include grid1(1fr);
+    }
+  }
+
+}
+
 
 @media screen and (max-width: 650px) {
     //INDEX MEDIA QUERYS//
@@ -53,27 +69,8 @@ $lista-colores:white,#6e6b6b26,rgba(137, 134, 134, 0.477);
         }
     }
 
-    //SOBRE NOSOTROS MEDIA QUERYS//
-  .sobre-nosotros {
-    flex-direction: column;
-    text-align: center;
-    img {
-      width: 80%;
-      max-width: 350px;
-    }
-    .texto {
-      p {
-        text-align: center;
-      }
-    }
-  }
   //INSPIRACION MEDIA QUERYS//
-  .inspiracion {
-    flex-direction: column;
-    text-align: center;
-    max-height: 800px;
-    gap: 10px;
-  }
+
   .galeria {
     .fotos {
       @include grid1(1fr);
@@ -105,13 +102,10 @@ $lista-colores:white,#6e6b6b26,rgba(137, 134, 134, 0.477);
   //FOOTER MEDIA QUERYS//
   footer {
     grid-template-columns: 1fr;
-  }
-  .footer-contenedor {
-    @include grid1(1fr);
-    text-align: center;
-    .footer-item {
-      justify-content: center;
+    .cajas-footer {
+      @include flex(flex,column,center,center ,15px)
     }
   }
+
   
 }
