@@ -1,59 +1,27 @@
-@use "sass:list";
-//variable de colores
-$color-principal: black;
+@use "../base/funcionalidades" as mix;
+@use "sass:list" as list;
 
-//listas de colores
-$lista-colores:white,#6e6b6b26,rgba(137, 134, 134, 0.477);
-
-//extensiones
-%mediacolumn{
-    grid-template-columns: (1fr);
-}
-
-//variable mixins
-@mixin grid1 ($frecuencia){
-    grid-template-columns: ($frecuencia);
-}
-
-@mixin flex($flex,$direction,$justify,$align,$gap){
-    display: $flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-    gap: $gap;
-}
-@mixin grid-colum($display,$template-columns,$template-rows,$gap){
-    display: $display;
-    grid-template-columns: $template-columns;
-    grid-template-rows: $template-rows;
-    gap: $gap;
-}
-@mixin grid-rows($display,$template-rows,$gap){
-    display: $display;
-    grid-template-rows: $template-rows;
-    gap: $gap;
-}
 
 footer {
     background-color: beige;
     text-align: center;
     gap: 10px;
-    background: $color-principal;
-    color: list.nth($lista-colores, 1);
+    background: mix.$color-principal;
+    color: list.nth(mix.$lista-colores, 1);
     padding: 30px 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
 
     .cajas-footer {
-        @include flex(flex, row, center, center, 15px);
+        @include mix.flex(flex, row, center, center, 15px);
         a {
             text-decoration: none;
             color: white;
         }
     }
     .caja-footer {
-        @include flex(flex, row, center, center, 15px);
+        @include mix.flex(flex, row, center, center, 15px);
         gap: 15px;
         a {
             text-decoration: none;

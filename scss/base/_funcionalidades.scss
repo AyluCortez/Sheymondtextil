@@ -6,9 +6,9 @@ $color-principal: black;
 $lista-colores:white,#6e6b6b26,rgba(137, 134, 134, 0.477);
 
 //extensiones
-// Placeholder selectors (%name) cannot be reliably @extend-ed across media queries.
-// Provide a mixin instead so it can be included inside media queries.
+// Mixins para columnas y utilidades
 @mixin mediacolumn() {
+    display: grid;
     grid-template-columns: 1fr;
 }
 
@@ -26,6 +26,10 @@ $lista-colores:white,#6e6b6b26,rgba(137, 134, 134, 0.477);
     grid-template-columns: $template-columns;
     grid-template-rows: $template-rows;
     gap: $gap;
+}
+@mixin grid1($cols){
+    display: grid;
+    grid-template-columns: $cols;
 }
 @mixin grid-rows($display,$template-rows,$gap){
     display: $display;

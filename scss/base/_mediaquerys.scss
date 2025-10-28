@@ -1,39 +1,5 @@
+@use "./funcionalidades" as mix;
 
- //variable de colores
-$color-principal: black;
-
-//listas de colores
-$lista-colores:white,#6e6b6b26,rgba(137, 134, 134, 0.477);
-
-//extensiones
-%mediacolumn{
-    grid-template-columns: (1fr);
-}
-
-//variable mixins
-
-@mixin flex($flex,$direction,$justify,$align,$gap){
-    display: $flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-    gap: $gap;
-}
-@mixin grid-colum($display,$template-columns,$template-rows,$gap){
-    display: $display;
-    grid-template-columns: $template-columns;
-    grid-template-rows: $template-rows;
-    gap: $gap;
-}
-@mixin grid-rows($display,$template-rows,$gap){
-    display: $display;
-    grid-template-rows: $template-rows;
-    gap: $gap;
-}
-@mixin grid1 ($frecuencia){
-    grid-template-columns: ($frecuencia);
-}
-//SE DEBE PONER EN CADA ARCHIVO DONDE SE DESEE USAR//
 
 //MEDIA QUERYS//
 @media screen and (max-width: 850px) {
@@ -46,7 +12,7 @@ $lista-colores:white,#6e6b6b26,rgba(137, 134, 134, 0.477);
   //sobre nosotros media querys//
   .sobre-nosotros {
     .caja-sobre{
-        @include grid1(1fr);
+        @include mix.grid1(1fr);
     }
   }
 
@@ -56,16 +22,16 @@ $lista-colores:white,#6e6b6b26,rgba(137, 134, 134, 0.477);
 @media screen and (max-width: 650px) {
     //INDEX MEDIA QUERYS//
   .cajas {
-    @include grid1(1fr);
+    @include mix.grid1(1fr);
     gap: 10px;
   }
   .ventajas{
     .ventaja-caja {
-        @include grid1(repeat(2,1fr));}
+        @include mix.grid1(repeat(2,1fr));}
     }
     .titulo-reco{
         .recomendacion{
-            @include grid1(1fr);
+            @include mix.grid1(1fr);
         }
     }
 
@@ -73,7 +39,7 @@ $lista-colores:white,#6e6b6b26,rgba(137, 134, 134, 0.477);
 
   .galeria {
     .fotos {
-      @include grid1(1fr);
+      @include mix.grid1(1fr);
       .foto{
         &.img-1 {
           grid-row: span 1;
@@ -97,13 +63,13 @@ $lista-colores:white,#6e6b6b26,rgba(137, 134, 134, 0.477);
 
   //CATALOGO MEDIA QUERYS//
   .catalogo {
-    @include grid1(1fr);
+    @include mix.grid1(1fr);
   }
   //FOOTER MEDIA QUERYS//
   footer {
     grid-template-columns: 1fr;
     .cajas-footer {
-      @include flex(flex,column,center,center ,15px)
+      @include mix.flex(flex,column,center,center ,15px)
     }
   }
 
