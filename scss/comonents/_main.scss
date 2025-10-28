@@ -251,37 +251,52 @@ $lista-colores:white,#6e6b6b26,rgba(137, 134, 134, 0.477);
 
 //SOBRE NOSOTROS//
 
+
+
+
+
 .sobre-nosotros{
-    @include flex(flex,column,center,center,30px);
-    margin: 30px auto;
-    max-width: 1200px;
+    padding: 80px 10%;
+    background-color: #f5f5f5;
     .titulo-sobre{
         text-align: center;
-        margin: 25px auto;
-        height: auto;
-        width: 100%;
-        background-color: #4844444a;
-        border-radius: 10px;
+        margin-bottom: 40px;
+        h2{
+            font-size: 2.5rem;
+            color: #000;
+        }
+        p{
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #333;
+        }
     }
     .caja-sobre{
-        @include grid-colum(grid,repeat(2,1fr),auto,20px); 
+        @include grid-colum(grid,repeat(2,1fr),auto,20px);
         margin: 10px 20px;
+        color: #5b5858;
+        margin: 20px 0px;
         .cajita{
             @include flex(flex,column,center,center,15px);
             text-align: center;
             height: 450px;
             width: 100%;
-
+            background-color: #837e7e68;
+            box-shadow: rgba(0, 0, 0, 0.378) 0px 4px 12px;
+            border-radius: 15px;
+            padding: 40px;
 
             img{
                 width: 500px;
-                height: 450px;
+                max-height: 100%;
                 object-fit: cover;
                 border-radius: 10px;
             }
         }
     }
 }
+
+
 
 
 
