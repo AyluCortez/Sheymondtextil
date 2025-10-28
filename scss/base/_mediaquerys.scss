@@ -13,6 +13,7 @@
   .sobre-nosotros {
     .caja-sobre{
         @include mix.grid1(1fr);
+        justify-content: center;
         .cajita{
             max-width: 340px;
         }

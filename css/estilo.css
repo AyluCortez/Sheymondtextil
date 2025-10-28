@@ -279,7 +279,7 @@ nav .navbar-toggler {
   grid-template-rows: auto;
   gap: 20px;
   color: #5b5858;
-  margin: 20px 10px;
+  margin: 20px 0px;
   max-width: 100%;
 }
 .sobre-nosotros .caja-sobre .cajita {
@@ -415,6 +415,7 @@ footer .footer-item img {
   .sobre-nosotros .caja-sobre {
     display: grid;
     grid-template-columns: 1fr;
+    justify-content: center;
   }
   .sobre-nosotros .caja-sobre .cajita {
     max-width: 340px;
