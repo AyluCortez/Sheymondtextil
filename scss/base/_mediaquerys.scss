@@ -13,8 +13,16 @@
   .sobre-nosotros {
     .caja-sobre{
         @include mix.grid1(1fr);
+        .cajita{
+            max-width: 340px;
+        }
     }
   }
+.titulo-reco{
+        .recomendacion{
+            @include mix.flex(flex,column,center,center,15px);
+        }
+    }
 
 }
 
@@ -28,12 +36,8 @@
   .ventajas{
     .ventaja-caja {
         @include mix.grid1(repeat(2,1fr));}
-    }
-    .titulo-reco{
-        .recomendacion{
-            @include mix.grid1(1fr);
-        }
-    }
+  }
+
 
   //INSPIRACION MEDIA QUERYS//
 
